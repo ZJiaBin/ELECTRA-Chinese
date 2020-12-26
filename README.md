@@ -26,8 +26,9 @@
         需要指定一个空的输出目录，模型开始训练之后即可停止程序，会生成step0时的ckpt文件，接下来需要通过generate_chinese_model.py中的脚本对参数进行初始化
         之后再重新执行run_pretraining.py即可在预训练好的模型基础上继续训练
         
-另外之所以尝试在哈工大开源的参数的基础上做预训练是因为本来尝试了从随机值开始训，但是发现模型很难收敛，loss一直在20上下，测试发现discriminator输出一直是同一个标签，还没找到什么解决方案
+另外之所以尝试在哈工大开源的参数的基础上做预训练是因为本来尝试了从随机值开始训，但是发现模型很难收敛，loss一直在20上下，测试发现discriminator输出一直是同一个标签，还没找到原因
 
 参考:
+
     https://github.com/google-research/electra
     https://github.com/ymcui/Chinese-ELECTRA
