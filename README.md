@@ -1,14 +1,16 @@
 # ELECTRA-Chinese
 
-提供了在哈工大开源的中文模型参数（https://github.com/ymcui/Chinese-ELECTRA）的基础上继续做预训练的方法
+提供了在哈工大开源的中文模型参数 https://github.com/ymcui/Chinese-ELECTRA  的基础上继续做预训练的方法
 
 主要遇到的问题是哈工大开源的Electra只保留了inference需要的参数，但没有提供比如Adam相关的参数，导致了在尝试加载该模型继续训练时由于参数不全报错
 解决方法：
    首先随机生成一个参数完整的ckpt文件
    之后依次加载哈工大开源的模型，以及上述生成的文件，将哈工大模型中出现的参数给生成的新模型重新初始化，其他的参数保持不变
    具体脚本在 generate_chinese_model.py中,脚本中涉及到一个variables.pikle文件，已上传在百度云盘
+   
       链接：https://pan.baidu.com/s/13FwCV9ET76LOBLbjTqiBlA 
       提取码：jzrp 
+
    该文件是从哈工大模型中提取的参数名和参数值(electra-base)
    
 
